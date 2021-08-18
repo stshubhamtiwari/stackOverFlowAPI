@@ -1,0 +1,19 @@
+<div style="padding: 10px;" class="responsive">
+    <div style="background-color: white;margin: 20px;margin-top: 20px;">
+        <div style="background-color: #00B557;color: white;padding: 10px;border-radius: 10px;">
+            {{data.title}}
+        </div>
+        <div style="display: inline-flex;margin-top: 20px;padding: 10px;">
+            <div>
+                <img [src]="data?.owner.profile_image" width="60" height="60" style="border-radius: 50%;" />
+            </div>
+            <div style="margin-left:20px">
+                <span style="text-transform: capitalize;font-size:18px;font-weight:500">{{data?.owner.display_name}}</span><br/>
+                <a href="{{data?.owner.link}}" target="_blank" style="font-size: 12px;">Visit stackOverFlow Profile</a><br/>
+                <a href="{{data.link}}" target="_blank" style="font-size: 12px;">post link</a><br/>
+                <span style="font-size: 12px;">{{data?.last_activity_date*1000|date:'dd/MMM/YYYY '}}</span><br/>
+                <span style="font-size: 12px;" >view - {{data.view_count}}</span>
+            </div>
+        </div>
+    </div>
+</div>

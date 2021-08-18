@@ -1,0 +1,87 @@
+.link-text{
+    color: mediumblue;
+    font-size: 18px;
+    font-weight:500
+}
+.font-family{
+    font-family: sans-serif;
+}
+.div-style{
+    margin: 10px;
+    background-color:white;
+    box-shadow: 0px 1px 6px #efefef;
+    border-radius: 10px;
+    padding: 10px;
+}
+.heading{
+    font-size: 18px;
+    font-weight: 800;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.display-12{
+    display: block;
+}
+
+@media screen and (min-width:768px) {
+    .display-12{
+          display: flex;
+    }
+    .responsive{
+        padding-left:20%;
+        padding-right:20%;
+    }
+    .responsive-input{
+        width: 50%;
+    }
+    .btn-center{
+        text-align: center;
+    }
+    .right{
+        text-align: right;
+    }
+}
+
+@media screen and (max-width:767px){
+    .responsive{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .responsive-input{
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+    .btn-center{
+        text-align: center;
+    }
+    .right{
+        text-align: center;
+    }
+}
+
+.input{
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    background-color: #EFEFEF;
+}
+.btn-style{
+    background-color: #00B557;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px;
+    color: white;
+    width: 200px;
+    font-weight: 600;
+    font-size: 16px;
+}
+label{
+    font-size: 14px;
+    font-weight: 600;
+}

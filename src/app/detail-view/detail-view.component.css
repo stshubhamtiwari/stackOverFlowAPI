@@ -1,0 +1,15 @@
+@media screen and (min-width:768px) {
+    .responsive{
+        padding-left:20% !important;
+        padding-right:20% !important;
+    }
+    
+}
+
+@media screen and (max-width:767px){
+    .responsive{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+}

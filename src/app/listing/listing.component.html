@@ -1,0 +1,94 @@
+<div class="font-family responsive">
+    <div class="heading">
+       STACKOVERFLOW API
+    </div>
+    <div style="background-color: white;padding: 10px; border-radius: 10px;margin: 10px;">
+      <div *ngIf="isLoading"  style="display:block;width: 100%;margin-top: -10px;">
+        <mat-progress-bar  mode="indeterminate"></mat-progress-bar>
+      </div>
+      <br/>
+      <div class="display-12">
+        <div class="responsive-input">
+          <label>fromdate</label><br />
+          <input type="date" class="input" id="fromdate"  />
+        </div>
+        <div class="responsive-input right" >
+          <label>todate</label><br />
+          <input type="date" class="input" id="todate" />
+        </div>
+        <br />
+      </div>
+      <div class="display-12" style="margin-top: 20px;">
+        <div class="responsive-input">
+          <label>min</label><br />
+          <input type="date" class="input" id="min"  />
+        </div>
+        <div class="responsive-input right" >
+          <label>max</label><br />
+          <input type="date" class="input" id="max"  />
+        </div>
+        <br />
+      </div>
+      <div class="display-12" style="margin-top: 20px;">
+        <div class="responsive-input">
+          <label>answer</label><br />
+          <input type="number" class="input" id="answer" />
+        </div>
+        <div class="responsive-input right">
+          <label>view</label><br />
+          <input type="number" class="input" id="view" />
+        </div>
+        <br />
+      </div>
+      <div class="display-12" style="margin-top: 20px;">
+        <div class="responsive-input">
+          <label>page</label><br />
+          <input type="number" class="input" id="page" />
+        </div>
+        <div class="responsive-input right">
+          <label>pagesize</label><br />
+          <input type="number" class="input" id="pagesize" />
+        </div>
+        <br />
+      </div>
+      <div class="display-12" style="margin-top: 20px;">
+        <div class="responsive-input">
+          <label>order</label><br />
+          <select name="order" class="input" style="width: 50%;" id="order">
+            <option name="desc" value="desc">desc</option>
+            <option name="asc" value="asc">asc</option>
+          </select>
+        </div>
+        <div class="responsive-input right">
+          <label>sort</label><br />
+          <select name="sort" class="input" style="width: 50%;" id="sort">
+            <option value="activity">activity</option>
+            <option value="votes">votes</option>
+            <option value="creation">creation</option>
+            <option value="relevance">relevance</option>
+          </select>
+        </div>
+        <br />
+      </div>
+  
+      <div style="display: block;margin-top: 10px;" class="btn-center">
+        <button class="btn btn-style" (click)="submitData()">Submit</button>
+      </div>
+    </div>
+  
+    <div *ngIf="data.length > 0">
+      <div  class="div-style" *ngFor="let element of data | paginate: { itemsPerPage: 10, currentPage: p }" (click)="redirect(element)">
+        <p class="link-text">{{element.title}}</p>
+        <span>{{element.creation_date*1000| date:'dd/MMM/YYYY hh:mm a'}}</span>
+      </div>
+      <div style="text-align: center;">
+        <pagination-controls (pageChange)="p=$event" class="float-right"></pagination-controls>
+      </div>
+    </div>
+    
+  
+  </div>
+  
+  
+  
+  
